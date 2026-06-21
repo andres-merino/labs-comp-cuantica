@@ -1,0 +1,15 @@
+Actividad 3 (individual). Codificación de circuitos para la corrección cuántica de errores
+
+Objetivos 
+
+En esta actividad desarrollarás un circuito cuántico completo de cifrado, descifrado y de análisis y corrección de mensajes.
+
+Pautas de elaboración
+
+Siguiendo un determinado algoritmo de cifrado (Shor, Steane o de cinco cúbits), deberás desarrollar un circuito cuántico utilizando el SDK/API que consideres más adecuado y que lleve a cabo el cifrado, descifrado y análisis del síndrome. Se deberá probar el correcto funcionamiento del circuito para obtener la tabla de síndrome asociada al algoritmo que recoja su valor para cada tipo de error (volteo o de fase) en cada cúbit del circuito.
+
+El primer paso es seleccionar el algoritmo para aplicar y su representación gráfica. Hay múltiples maneras de poder implementar un circuito de acuerdo con su diseño, por lo que es especialmente importante comprobar que el funcionamiento es el correcto. En general, no es necesario ir calculando el vector de estado de cada paso y comprobar su valor, sin embargo, es especialmente relevante comprobar que los cúbits lógicos del algoritmo implementado son los esperados.
+
+En las fases posteriores de desarrollo de la actividad se recurre, habitualmente, a realizar una batería de pruebas para confirmar que los posibles valores del síndrome son correctos, los cuales nos permitirían tomar las acciones correspondientes para corregir el error. Recordemos que el valor del síndrome para un determinado tipo de error es siempre el mismo y que deberemos confirmarlo con el número de ensayos (shots en la mayoría de las API) que realicemos.
+
+Para facilitar el desarrollo y comprobación del algoritmo, es muy recomendable que el código desarrollado sea modular. En la implementación en Python una de las maneras puede ser desarrollando funciones que, admitiendo un circuito como parámetro de entrada (junto con otros parámetros dependiendo del objetivo de la función) devuelva un circuito para poder seguir operando con él. Así, por ejemplo, se pueden contemplar funciones para inicialización y generación del cúbit lógico, comprobación, adición de un error específico en un cúbit determinado y por último (por ejemplo) cálculo del síndrome de un circuito específico.
